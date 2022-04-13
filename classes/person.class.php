@@ -12,14 +12,16 @@
 
         public static $sub = "Clever";
 
-        public function __construct($firstN = 'New', $lastN = 'Person', $age = '?')
+        const EXAMPLE = "You can't change this!";
+
+        public function __construct(string $firstN = 'New', string $lastN = 'Person', $age = '?')
         {
             $this->name = $firstN;
             $this->surname = $lastN;
             $this->age = $age;
         }
 
-        public function setName($first, $last){
+        public function setName(string $first, string $last){
             $this->name = $first;
             $this->surname = $last;
         }
@@ -43,6 +45,8 @@
     }
 
     // class Pet extends Person{        // inherites Person
-
+        // echo parent::EXAMPLE;
+        // echo parent::$sub;
+        // echo self::$static_val;
     // }
 ?>
